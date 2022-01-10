@@ -50,16 +50,17 @@ void swap_node(listint_t **head, listint_t *left, listint_t *right)
  *
  * Return: nothing.
  */
+
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *current, *prev;
 
-	current = (*list);
-
-	if (current == NULL || current->next == NULL)
+	if (list == NULL || (*list)->next == NULL)
 	{
 		return;
 	}
+
+	current = (*list);
 
 	while (current)
 	{
