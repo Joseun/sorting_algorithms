@@ -12,9 +12,14 @@ void bubble_sort(int *array, size_t size)
 	size_t i = 0;
 	int temp, flag = 0;
 
+	if (array == NULL || size < 2)
+	{
+		return;
+	}
+
 	while (i != size - 1)
 	{
-		if(array[i] > array[i + 1])
+		if (array[i] > array[i + 1])
 		{
 			temp = array[i];
 			array[i] = array[i + 1];
@@ -24,9 +29,9 @@ void bubble_sort(int *array, size_t size)
 		}
 		i++;
 
-		if(i == (size - 1))
+		if (i == (size - 1))
 		{
-			if(flag == 0)
+			if (flag == 0)
 			{
 				break;
 			}
