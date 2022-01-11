@@ -55,16 +55,17 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *current, *prev;
 
-	current = (*list);
-	
 	if (list == NULL || (*list)->next == NULL)
 	{
 		return;
 	}
 
+	current = (*list);
+
 	while (current)
 	{
 		prev = current->prev;
+
 		while ((prev) && (current->n < prev->n))
 		{
 			swap_node(list, prev, current);
